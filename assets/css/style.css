@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    background-color: lemonchiffon;
+}
+
+h1 {
+    font-size: 40px;
+    margin-left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    background: darkblue;
+}
+  
+nav ul li a {
+    font-weight: bold;
+    color: lightgray;
+}
+
+section ul {
+    display: flex;
+    justify-content:space-around;
+}
+  
+section a {
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: heading;
+    background-color: darkblue;
+    color:darkgray;
+    align-items: center;
+}
+
+.nav-bar {
+    color: darkgray
+}
+
+/* Defines the About Me section of the page  */
+.about {
+    grid-area: about;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-right: 6px solid darkblue;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.about:hover {
+    background-color: lightgray;
+}
+
+.about-text {
+    grid-area: about-text;
+    margin-right: 100px;
+    margin-left: 10px;
+    }
+
+/* Defines the Work Portfolio section of the page  */
+.work {
+    display: grid;
+    grid-area: work;
+    font-size: 50px;
+    border-right: 6px solid darkblue;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.work p {
+    align-self: center;
+}
+
+.work:hover {
+    background-color: lightgray;
+}
+
+/* Use this to make the pictures a little larger when the user hovers over input */
+.make-larger:hover {
+    transform: scale(1.03);
+    box-shadow: 10px 10px 10px rgba (0,0,0,0.5);
+}
+
+/* Use this to define the picture width and height and fit */
+.define-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Define the picture grid areas */
+.ex1 {
+    grid-area: ex1;
+    border: 2px solid black;
+    position: relative;
+}
+
+.ex2 {
+    grid-area: ex2;
+    border: 2px solid black;
+    position: relative;
+}
+
+.ex3 {
+    grid-area: ex3;
+    border: 2px solid black;
+    position: relative;
+}
+
+.ex4 {
+    grid-area: ex4;
+    border: 2px solid black;
+    position: relative;
+}
+
+.ex5 {
+    grid-area: ex5;
+    border: 2px solid black;
+    position: relative;
+}
+
+/* Define the position of the tags on the pictures  */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 50px;
+    border: 5px solid black;
+    background-color: rgb(255, 255, 255, .3);
+    border-radius: 10px;
+    padding: 7px;
+}
+
+/* Define the contact area of the page  */
+/* Describe what to do when user hovers over image  */
+.contact {
+    grid-area: contact;
+    font-size: 50px;
+    border-right: 6px solid darkblue;
+    align-self: center;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.contact:hover {
+    background-color: lightgray;
+}
+
+.info {
+    grid-area: info;
+}
+
+
+.text-center {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.pic {
+    display:grid;
+    grid-template-columns: auto auto;
+}
+
+.pic img {
+    width: 100px;
+    height: 100px; 
+}
+
+/* This is how the screen will be layed out for a tablet size   */
+@media screen and (max-width: 992px) {
+    .grid-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        grid-template-areas: 
+            "heading heading"
+            "nav-bar nav-bar"
+            "about about"
+            "about-text about-text"
+            "work work"
+            "ex1 ex1"
+            "ex2 ex3"
+            "ex4 ex5"
+            "contact contact"
+            "info info"  
+    }
+}
+
+/* This is how the screen will be layed out for a monitor   */
+@media screen and (min-width: 993px) {
+    .grid-item {
+        display: grid;
+        grid-template-columns: .5fr 1fr 1fr;
+        gap: 10px;
+        grid-template-rows: auto auto 500px 500px 500px auto;
+        grid-template-areas: 
+            "heading heading heading"
+            "about about-text about-text"
+            "work ex1 ex1"
+            "work ex2 ex3"
+            "work ex4 ex5"
+            "contact info info"
+    }
+}
+
+/* This is how the screen will be layed out for a mobile device   */
+@media screen and (max-width: 768px) {
+    .grid-item {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+        grid-template-areas: 
+            "heading"
+            "nav-bar"
+            "about"
+            "about-text"
+            "work"
+            "ex1"
+            "ex2"
+            "ex3"
+            "ex4"
+            "ex5"
+            "contact"
+            "info"
+    }
+}
