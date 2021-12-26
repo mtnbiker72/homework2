@@ -2,6 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
     background-image: url(../images/waves.jpeg);
+    background-size:contain;
 }
 
 h1 {
@@ -41,21 +42,12 @@ nav ul li a {
     color:darkgray;
 }
 
-
-
-/* Define the bg-pic section */
-.bg-pic {
-    grid-area: bg-pic;
-    height: 200px;
-}
-
 /* Defines the About Me section of the page  */
 .about {
     grid-area: about;
     font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
     border-right: 6px solid darkblue;
-    text-align: right;
     padding-right: 10px;
 }
 
@@ -65,10 +57,15 @@ nav ul li a {
 
 .about-text {
     grid-area: about-text;
-    margin-right: 100px;
     margin-left: 10px;
     background-color: rgb(255, 255, 255, .4);
     }
+
+.bg-pic {
+    position: relative;
+    top: -50px;
+    width: 100%;
+}
 
 /* Defines the Work Portfolio section of the page  */
 .work {
@@ -76,7 +73,6 @@ nav ul li a {
     grid-area: work;
     font-size: 50px;
     border-right: 6px solid darkblue;
-    text-align: right;
     padding-right: 10px;
 }
 
@@ -91,7 +87,9 @@ nav ul li a {
 /* Make the pictures a little larger when the user hovers over input */
 .make-larger:hover {
     transform: scale(1.03);
+    border: 5px solid black;
     box-shadow: 10px 10px 10px rgba (0,0,0,0.5);
+    z-index: 9999;
 }
 
 /* Define the picture width and height and fit */
@@ -151,7 +149,6 @@ nav ul li a {
     font-size: 50px;
     border-right: 6px solid darkblue;
     align-self: center;
-    text-align: right;
     padding-right: 10px;
 }
 
@@ -191,15 +188,16 @@ nav ul li a {
     padding-top: 20px;
 }
 
+
+
 /* This is how the screen will be layed out for a tablet size   */
 @media screen and (max-width: 992px) {
     .grid-item {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        gap: 15px;
         grid-template-areas: 
             "heading heading"
-            "bg-pic bg-pic"
             "nav-bar nav-bar"
             "about about"
             "about-text about-text"
@@ -210,6 +208,9 @@ nav ul li a {
             "contact contact"
             "info info"  
     }
+    .title-align {
+        text-align: center;
+    }
 }
 
 /* This is how the screen will be layed out for a monitor   */
@@ -217,29 +218,29 @@ nav ul li a {
     .grid-item {
         display: grid;
         grid-template-columns: .5fr 1fr 1fr;
-        gap: 10px;
-        grid-template-rows: auto 200px auto 500px 500px 500px auto;
+        gap: 15px;
+        grid-template-rows: auto auto 500px 500px 500px auto;
         grid-template-areas: 
             "heading heading heading"
-            "bg-pic bg-pic bg-pic"
             "about about-text about-text"
             "work ex1 ex1"
             "work ex2 ex3"
             "work ex4 ex5"
             "contact info info"
     }
+    .title-align {
+        text-align: right;
+    }
 }
 
 /* This is how the screen will be layed out for a mobile device   */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     .grid-item {
         display: grid;
         grid-template-columns: 1fr;
-
-        gap: 10px;
+                gap: 15px;
         grid-template-areas: 
             "heading"
-            "bg-pic"
             "nav-bar"
             "about"
             "about-text"
@@ -251,5 +252,8 @@ nav ul li a {
             "ex5"
             "contact"
             "info"
+    }
+    .title-align {
+        text-align: center;
     }
 }
