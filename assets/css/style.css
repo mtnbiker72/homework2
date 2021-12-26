@@ -1,36 +1,39 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
-    background-color: lemonchiffon;
+    background-image: url(../images/waves.jpeg);
 }
 
 h1 {
     font-size: 40px;
-    margin-left: 10px;
+    margin-left: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 2px #ff0000
+
+}
+
+nav {
+    display: grid;
+    color: darkgray;
+     align-content: center; 
 }
 
 nav ul {
-    display: flex;
-    justify-content: space-between;
     background: darkblue;
+    display: flex;
+    justify-content: space-around;
 }
   
+nav ul li {
+    display:inline-block;
+}
+
 nav ul li a {
     font-weight: bold;
     color: lightgray;
 }
 
-section ul {
-    display: flex;
-    justify-content:space-around;
-}
-  
-section a {
-    color: black;
-    font-weight: bold;
-    font-size: 30px;
-}
+
 
 .heading {
     display: grid;
@@ -38,11 +41,14 @@ section a {
     grid-area: heading;
     background-color: darkblue;
     color:darkgray;
-    align-items: center;
 }
 
-.nav-bar {
-    color: darkgray
+
+
+/* Define the bg-pic section */
+.bg-pic {
+    grid-area: bg-pic;
+    height: 200px;
 }
 
 /* Defines the About Me section of the page  */
@@ -83,13 +89,13 @@ section a {
     background-color: lightgray;
 }
 
-/* Use this to make the pictures a little larger when the user hovers over input */
+/* Make the pictures a little larger when the user hovers over input */
 .make-larger:hover {
     transform: scale(1.03);
     box-shadow: 10px 10px 10px rgba (0,0,0,0.5);
 }
 
-/* Use this to define the picture width and height and fit */
+/* Define the picture width and height and fit */
 .define-img {
     object-fit: cover;
     width: 100%;
@@ -164,16 +170,6 @@ section a {
     padding-top: 20px;
 }
 
-.pic {
-    display:grid;
-    grid-template-columns: auto auto;
-}
-
-.pic img {
-    width: 100px;
-    height: 100px; 
-}
-
 /* This is how the screen will be layed out for a tablet size   */
 @media screen and (max-width: 992px) {
     .grid-item {
@@ -182,6 +178,7 @@ section a {
         gap: 10px;
         grid-template-areas: 
             "heading heading"
+            "bg-pic bg-pic"
             "nav-bar nav-bar"
             "about about"
             "about-text about-text"
@@ -200,9 +197,10 @@ section a {
         display: grid;
         grid-template-columns: .5fr 1fr 1fr;
         gap: 10px;
-        grid-template-rows: auto auto 500px 500px 500px auto;
+        grid-template-rows: auto 200px auto 500px 500px 500px auto;
         grid-template-areas: 
             "heading heading heading"
+            "bg-pic bg-pic bg-pic"
             "about about-text about-text"
             "work ex1 ex1"
             "work ex2 ex3"
@@ -220,6 +218,7 @@ section a {
         gap: 10px;
         grid-template-areas: 
             "heading"
+            "bg-pic"
             "nav-bar"
             "about"
             "about-text"
