@@ -60,7 +60,7 @@ nav ul li a {
 }
 
 .about:hover {
-    background-color: lightgray;
+    background-color: rgba(41, 8, 8, 0.4);
 }
 
 .about-text {
@@ -85,7 +85,7 @@ nav ul li a {
 }
 
 .work:hover {
-    background-color: lightgray;
+    background-color: rgba(41, 8, 8, 0.4);
 }
 
 /* Make the pictures a little larger when the user hovers over input */
@@ -156,7 +156,7 @@ nav ul li a {
 }
 
 .contact:hover {
-    background-color: lightgray;
+    background-color: rgba(41, 8, 8, 0.4);
 }
 
 .info {
