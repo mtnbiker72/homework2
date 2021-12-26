@@ -33,8 +33,6 @@ nav ul li a {
     color: lightgray;
 }
 
-
-
 .heading {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -69,6 +67,7 @@ nav ul li a {
     grid-area: about-text;
     margin-right: 100px;
     margin-left: 10px;
+    background-color: rgb(255, 255, 255, .4);
     }
 
 /* Defines the Work Portfolio section of the page  */
@@ -162,8 +161,30 @@ nav ul li a {
 
 .info {
     grid-area: info;
+    display: grid;
+    align-content: center;
 }
 
+.info section {
+    display: grid;
+    color: darkgray;
+    align-content: center; 
+}
+
+.info section ul {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255, .5);
+}
+  
+.info section ul li {
+    display:inline-block;
+}
+
+.info section ul li a {
+    font-weight: bold;
+    color: black;
+}
 
 .text-center {
     text-align: center;
