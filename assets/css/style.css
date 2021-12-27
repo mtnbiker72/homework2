@@ -20,7 +20,7 @@ nav {
 }
 
 nav ul {
-    background: darkblue;
+    background:midnightblue;
     display: flex;
     justify-content: space-around;
 }
@@ -38,7 +38,7 @@ nav ul li a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-area: heading;
-    background-color: darkblue;
+    background-color: midnightblue;
     color:darkgray;
 }
 
@@ -51,14 +51,15 @@ nav ul li a {
     padding-right: 10px;
 }
 
+/* Changes the background when the user hovers over the about section  */
 .about:hover {
-    background-color: rgba(41, 8, 8, 0.4);
+    background-color: rgba(9, 9, 201, 0.4);
 }
 
 .about-text {
     grid-area: about-text;
     margin-left: 10px;
-    background-color: rgb(255, 255, 255, .4);
+    background-color: rgba(255, 255, 255, 0.392);
     }
 
 .bg-pic {
@@ -81,7 +82,7 @@ nav ul li a {
 }
 
 .work:hover {
-    background-color: rgba(41, 8, 8, 0.4);
+    background-color: rgba(9, 9, 201, 0.4);
 }
 
 /* Make the pictures a little larger when the user hovers over input */
