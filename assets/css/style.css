@@ -1,8 +1,10 @@
+/* Set up defaults for the page  */
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
     background-image: url(../images/waves.jpeg);
     background-size:contain;
+    margin-right: 20px;
 }
 
 h1 {
@@ -10,13 +12,13 @@ h1 {
     margin-left: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: 2px 2px #ff0000
-
 }
 
+/* Define navigation bar settings  */
 nav {
     display: grid;
     color: darkgray;
-     align-content: center; 
+    align-content: center; 
 }
 
 nav ul {
@@ -34,6 +36,8 @@ nav ul li a {
     color: lightgray;
 }
 
+/* Setting for grid template heading  */
+/* Define a grid within grid with 2 columns  */
 .heading {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -60,8 +64,9 @@ nav ul li a {
     grid-area: about-text;
     margin-left: 10px;
     background-color: rgba(255, 255, 255, 0.392);
-    }
+}
 
+/* Position the picture of Heather  */
 .bg-pic {
     position: relative;
     top: -50px;
@@ -81,15 +86,16 @@ nav ul li a {
     align-self: center;
 }
 
+/* Changes the background when the user hovers over the work section  */
 .work:hover {
     background-color: rgba(9, 9, 201, 0.4);
 }
 
 /* Make the pictures a little larger when the user hovers over input */
 .make-larger:hover {
-    transform: scale(1.03);
-    border: 5px solid black;
-    box-shadow: 10px 10px 10px rgba (0,0,0,0.5);
+    transform: scale(1.02);
+    border: 5px solid white;
+    border-radius: 10px;
     z-index: 9999;
 }
 
@@ -154,7 +160,7 @@ nav ul li a {
 }
 
 .contact:hover {
-    background-color: rgba(41, 8, 8, 0.4);
+    background-color: rgba(9, 9, 201, 0.4);
 }
 
 .info {
@@ -194,7 +200,7 @@ nav ul li a {
 .grid-item {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 20px;
     grid-template-areas: 
         "heading"
         "nav-bar"
@@ -208,10 +214,10 @@ nav ul li a {
         "ex5"
         "contact"
         "info"
-}
-.title-align {
-    text-align: center;
-}
+    }
+    .title-align {
+        text-align: center;
+    }
 
 /* This is how the screen will be layed out for a tablet size   */
 /* Relocate the text describing the section so it is centered  */
@@ -219,7 +225,7 @@ nav ul li a {
     .grid-item {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 15px;
+        gap: 20px;
         grid-template-areas: 
             "heading heading"
             "nav-bar nav-bar"
